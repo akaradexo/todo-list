@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  
+</head>
+
+<body>
+  <div class="container">
+    <form class="todo-form" id="todo-form">
+      <div class="alert" id="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+      </div>
+      <h1>Todo App</h1>
+      <div class="form-control">
+        <input type="text" class="input" id="todo" placeholder="eg., meeting at 2pm ">
+        <button type="submit" role="button" class="btn btn-submit" id="btn-submit">Submit</button>
+      </div>
+      <div class="todo-container" id="todo-container">
+        <div class="todo-list" id="todo-list">
+          <article class="todo-item">
+            <p class="title">${todoValue}</p>
+            <div class="btn-container">
+              <button type="button" role="button" class="btn-edit" id="btn-edit">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button type="button" role="button" class="btn-delete" id="btn-delete">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+        <button type="submit" id="btn-clear" class="btn-clear-pushable" role="button">
+          <span class="btn-clear-shadow"></span>
+          <span class="btn-clear-edge"></span>
+          <span class="btn-clear-front text">
+            Clear All
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+<script src="./script/script.js"></script>
+</html>

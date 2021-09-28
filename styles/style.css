@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fraunces:wght@400;500;600;700&display=swap');
+:root{
+    --black1: #181818;
+    --black2: #202020;
+    --white1: #d9d9d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  /* font-family: 'Architects Daughter', cursive;/ */
+    font-family: 'Fraunces', serif;
+    margin: 0;
+    color: var(--black2);
+    background-color: var(--white1);
+    overflow-x: hidden;
+    
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-control{
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input {
+  width: 100%;
+  min-height: 3rem; 
+  border: 2px solid  var(--black2);
+  color: var(--black1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: transparent;
+  text-align: center;
+}
+
+.input :focus {
+  outline: none;
+  border:none;
+}
+
+.todo-form{
+  width: 50%;
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .todo-form{
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .todo-form{
+    width: 90%;
+  }
+}
+.todo-list{
+  width: 100%;
+}
+.todo-item{
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+.title{
+  width: 70%;
+}
+.btn-container{
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/* note */
+.todo-container {
+  visibility: hidden;
+
+  font-family: 'Architects Daughter', cursive;
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  width: 100%;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.todo-container:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.todo-container:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+h1{
+  margin: 0;
+}
+/* alert */
+.alert {
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  width: 100%;
+  color: white;
+  visibility: hidden;
+}
+.danger{
+  background-color: #f44336;
+}
+.succuss{
+  background-color: #04AA6D;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+/* Buttons */
+.btn-submit {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: .375em;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #363636;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1rem;
+  min-height: 3rem;
+  justify-content: center;
+  line-height: 1.5;
+  padding: calc(.5em - 1px) 1em;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.btn-submit:active {
+  border-color: #4a4a4a;
+  outline: 0;
+}
+
+.btn-submit:focus {
+  border-color: #485fc7;
+  outline: 0;
+}
+
+.btn-submit:hover {
+  border-color: #b5b5b5;
+}
+
+.btn-submit:focus:not(:active) {
+  box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
+}
+.btn-clear-pushable {
+  margin-top: 1rem;
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-clear-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.btn-clear-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.btn-clear-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .btn-clear-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.btn-clear-pushable:hover {
+  filter: brightness(110%);
+}
+
+.btn-clear-pushable:hover .btn-clear-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.btn-clear-pushable:active .btn-clear-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.btn-clear-pushable:hover .btn-clear-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.btn-clear-pushable:active .btn-clear-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.btn-clear-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.btn-edit{
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+  color: blue;
+  margin: 0 1rem;
+  opacity: 0.7;
+}
+.btn-edit:hover{
+  opacity: 1;
+}
+.btn-delete{
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+  color: red;
+  margin: 0 1rem;
+  opacity: 0.7;
+}
+.btn-delete:hover{
+  opacity: 1;
+}

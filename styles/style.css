@@ -98,9 +98,12 @@ body {
   align-items: center;
 }
 /* note */
+.show-container{
+  visibility: visible!important;
+
+}
 .todo-container {
   visibility: hidden;
-
   font-family: 'Architects Daughter', cursive;
   align-self: center;
   background-color: #fff;
@@ -151,12 +154,11 @@ h1{
   border-radius: 0.8rem;
   width: 100%;
   color: white;
-  visibility: hidden;
 }
 .danger{
   background-color: #f44336;
 }
-.succuss{
+.success{
   background-color: #04AA6D;
 }
 .closebtn {

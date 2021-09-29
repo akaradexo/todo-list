@@ -17,28 +17,17 @@
     <form class="todo-form" id="todo-form">
       <div class="alert" id="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
       </div>
       <h1>Todo App</h1>
       <div class="form-control">
         <input type="text" class="input" id="todo" placeholder="eg., meeting at 2pm ">
-        <button type="submit" role="button" class="btn btn-submit" id="btn-submit">Submit</button>
+        <button type="submit" role="button" class="btn btn-submit" id="btn-submit">Add New Task</button>
       </div>
       <div class="todo-container" id="todo-container">
         <div class="todo-list" id="todo-list">
-          <article class="todo-item">
-            <p class="title">${todoValue}</p>
-            <div class="btn-container">
-              <button type="button" role="button" class="btn-edit" id="btn-edit">
-                <i class="fas fa-edit"></i>
-              </button>
-              <button type="button" role="button" class="btn-delete" id="btn-delete">
-                <i class="fas fa-trash-alt"></i>
-              </button>
-            </div>
-          </article>
+         
         </div>
-        <button type="submit" id="btn-clear" class="btn-clear-pushable" role="button">
+        <button type="button" id="btn-clear" class="btn-clear-pushable" role="button">
           <span class="btn-clear-shadow"></span>
           <span class="btn-clear-edge"></span>
           <span class="btn-clear-front text">

@@ -20,7 +20,8 @@ body {
     font-family: 'Fraunces', serif;
     margin: 0;
     color: var(--black2);
-    background-color: var(--white1);
+    background-color: #000000;
+background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
     overflow-x: hidden;
     
 }
@@ -38,14 +39,32 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .form-control{
+    flex-direction: column;
+  }
+  .btn-submit{
+    margin-top:0.8rem ;
+  }
+  .input{
+    border-top-right-radius: .375em;
+    border-bottom-right-radius: .375em;
+  }
+  .btn-submit{
+    border-top-left-radius: .375em;
+    border-bottom-left-radius: .375em;
+  }
+}
 .input {
   width: 100%;
   min-height: 3rem; 
+  background-color: #fff;
   border: 2px solid  var(--black2);
   color: var(--black1);
+  border-top-left-radius: .375em;
+  border-bottom-left-radius: .375em;
   font-size: 1.2rem;
   font-weight: 600;
-  background: transparent;
   text-align: center;
 }
 
@@ -64,14 +83,16 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+
 @media (max-width: 992px) {
   .todo-form{
-    width: 80%;
+    width: 85%;
   }
 }
 @media (max-width: 768px) {
   .todo-form{
-    width: 90%;
+    width: 95%;
   }
 }
 .todo-list{
@@ -88,6 +109,7 @@ body {
 }
 .title{
   width: 70%;
+  word-wrap: break-word;
 }
 .btn-container{
   width: 30%;
@@ -147,21 +169,29 @@ body {
 
 h1{
   margin: 0;
+  color: var(--black1);
 }
 /* alert */
 .alert {
   padding: 0.5rem;
-  border-radius: 0.8rem;
+  border-radius: 0.2rem;
   width: 100%;
-  color: white;
+  text-align: center;
+  font-weight: 800;
 }
 .danger{
-  background-color: #f44336;
+  background-color: #ffb3b3;
+  color: #ff0000;
+
 }
 .success{
-  background-color: #04AA6D;
+  background-color: #b3e4c3
+  ;
+  color: #02a437
+  ;
+
 }
-.closebtn {
+.closeBtn {
   margin-left: 15px;
   color: white;
   font-weight: bold;
@@ -172,19 +202,21 @@ h1{
   transition: 0.3s;
 }
 
-.closebtn:hover {
+.closeBtn:hover {
   color: black;
 }
 /* Buttons */
 .btn-submit {
   align-items: center;
+  font-weight: 800;
   appearance: none;
-  background-color: #fff;
-  border: 1px solid #dbdbdb;
-  border-radius: .375em;
+  background-color: var(--black1);
+  border: 2px solid  var(--black2);
+  color: var(--white1);
+  border-top-right-radius: .375em;
+  border-bottom-right-radius: .375em;
   box-shadow: none;
   box-sizing: border-box;
-  color: #363636;
   cursor: pointer;
   display: inline-flex;
   font-size: 1rem;
@@ -207,7 +239,7 @@ h1{
 }
 
 .btn-submit:focus {
-  border-color: #485fc7;
+  border-color:#02a437 ;
   outline: 0;
 }
 
@@ -325,7 +357,7 @@ h1{
   background-color: transparent;
   border:none;
   cursor: pointer;
-  color: blue;
+  color: #3127cf;
   margin: 0 1rem;
   opacity: 0.7;
 }
@@ -336,7 +368,7 @@ h1{
   background-color: transparent;
   border:none;
   cursor: pointer;
-  color: red;
+  color: #ff0000;
   margin: 0 1rem;
   opacity: 0.7;
 }

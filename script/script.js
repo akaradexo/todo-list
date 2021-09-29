@@ -112,14 +112,11 @@ const setBackToDefault = function(){
 // display alerts
 const displayAlert = function(message,color){
   alert.innerText = message;
-  
   alert.classList.add(color);
-
   setTimeout(()=>{
     alert.innerText = '';
     alert.classList.remove(color);
   },1500)
-
 };
 
 
@@ -128,4 +125,4 @@ const displayAlert = function(message,color){
 
 todoForm.addEventListener('submit',addItem);
 
-btnClear.addEventListener('click',clearItems)
+btnClear.addEventListener('click',clearItems);
